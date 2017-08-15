@@ -1,0 +1,37 @@
+{
+  "source": "SqlSource",
+  "sink": "ViSink",
+  "plugins": [
+    "ResolveBlobs",
+    "RewriteKey",
+    "RewriteRelations",
+    "TreeRewrite",
+    "HierarchyRewrite",
+    "RewriteDates",
+    "TransferListApps"
+  ],
+  "steps": [
+    "conf",
+    "blob",
+    "data"
+  ],
+  "source-cfg": {
+    "file": "your-backup.db"
+  },
+  "sink-cfg": {
+    "url": "https://your-application.appspot.com",
+    "importKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  },
+  "plugin-cfg": {
+    "HierarchyRewrite": {
+      "modules": [
+      ]
+    },
+    "TreeRewrite": {
+      "modules": [
+        "file"
+      ]
+    }
+  },
+  "viur.version": 2
+}

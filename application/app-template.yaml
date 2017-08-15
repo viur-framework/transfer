@@ -1,0 +1,17 @@
+application: APPNAME
+
+version: dbbackup
+runtime: python27
+api_version: 1
+threadsafe: True
+
+handlers:
+- url: /.*
+  script: export.application
+
+libraries:
+- name: jinja2 
+  version: "latest"
+
+inbound_services:
+- warmup
