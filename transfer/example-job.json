@@ -8,7 +8,7 @@
     "TreeRewrite",
     "HierarchyRewrite",
     "RewriteDates",
-    "TransferListApps"
+    "TransferEntities"
   ],
   "steps": [
     "conf",

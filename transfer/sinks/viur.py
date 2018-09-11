@@ -48,7 +48,7 @@ class ViSink(object):
 				if isinstance(v,unicode):
 					v = v.encode("UTF-8")
 				t[k] = v
-			self.ns.request("/dbtransfer/storeEntry", {"e":pickle.dumps(t).encode("HEX"),"key":self.importKey})
+			self.ns.request("/dbtransfer/storeEntry2", {"e":pickle.dumps(t).encode("HEX"),"key":self.importKey})
 		except:
 			print("------")
 			print( entry )
@@ -67,4 +67,6 @@ class ViSink(object):
 		return( key, mimetype )
 
 
+	def setModulConfig(self, cfg):
+		print(cfg)
 

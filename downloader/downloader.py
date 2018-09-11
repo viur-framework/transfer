@@ -428,7 +428,7 @@ else:
 # Fetch blobs
 res = networkService.request("/export/exportBlob", {"backupkey": backupKey})
 numBlobs = 0
-while 0 and res["values"]:
+while res["values"]:
 	numBlobs += len(res["values"])
 	print("Got a total of %s blobs so far" % numBlobs)
 	for r in res["values"]:

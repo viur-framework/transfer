@@ -18,7 +18,7 @@ class SqlSource(object):
 		if cursor.execute("""PRAGMA table_info(entries)""").fetchone() is None or \
 						cursor.execute("""PRAGMA table_info(blobs)""").fetchone() is None:
 			raise ValueError("INVALID INPUT FILE!")
-		self.backupRun = 4
+		self.backupRun = 1
 
 	def listExportModules(self):
 		raise NotImplementedError()
